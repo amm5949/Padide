@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="mx-auto max-w-5xl space-y-5 p-6" aria-label="در حال بارگذاری" role="status"><div className="skeleton h-10 w-60 rounded-xl"/><div className="grid gap-4 sm:grid-cols-3">{[1,2,3].map(x=><div key={x} className="skeleton h-32 rounded-2xl"/>)}</div><div className="skeleton h-80 rounded-2xl"/></div>}

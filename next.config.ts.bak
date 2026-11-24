@@ -1,0 +1,12 @@
+import type { NextConfig } from 'next'
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  // Private data must not be embedded in publicly cacheable responses.
+  async headers() {
+    return [
+      { source: '/user/:path*', headers: [{ key: 'Cache-Control', value: 'private, no-store' }] },
+      { source: '/admin/:path*', headers: [{ key: 'Cache-Control', value: 'private, no-store' }] },
+    ]
+  },
+}
+export default nextConfig
